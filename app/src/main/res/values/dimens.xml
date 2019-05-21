@@ -1,3 +1,9 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <!--Featured Links Card Dimensions-->
+    <dimen name="feat_link_cardElevation">5dp</dimen>
+    <dimen name="feat_link_cardCornerRadius">15dp</dimen>
+    <dimen name="card_marginRight">16dp</dimen>
+    <dimen name="card_marginEnd">16dp</dimen>
+
 </resources>
