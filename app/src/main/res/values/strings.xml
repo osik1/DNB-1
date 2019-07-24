@@ -2,6 +2,7 @@
     <string name="app_name">DNB</string>
     <string name="action_settings">Settings</string>
 
+
     <!--Featured Links Reference Texts-->
     <string name="featured_links">Featured Links</string>
     <string name="describe_logo_featured_links_logo">featured links logo</string>
@@ -17,6 +18,5 @@
     <string name="describe_logo_ug_web">ug Website logo</string>
     <string name="ug_library">UG Library</string>
     <string name="describe_logo_ug_library">ug library logo</string>
-
-
+    <string name="School_name">UNIVERSITY OF GHANA</string>
 </resources>
