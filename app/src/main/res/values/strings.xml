@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Dbn</string>
+    <string name="app_name">DNB</string>
     <string name="action_settings">Settings</string>
     <string name="School_name">UNIVERSITY OF GHANA</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_dnb_ilibrary">DnbILibrary</string>
 </resources>
