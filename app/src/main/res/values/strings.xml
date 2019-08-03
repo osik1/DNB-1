@@ -1,22 +1,23 @@
 <resources>
     <string name="app_name">DNB</string>
     <string name="action_settings">Settings</string>
-
-
-    <!--Featured Links Reference Texts-->
-    <string name="featured_links">Featured Links</string>
-    <string name="describe_logo_featured_links_logo">featured links logo</string>
-    <string name="i_library">I-Library</string>
-    <string name="describe_logo_i_library">i-library logo</string>
-    <string name="email">E-Mail</string>
-    <string name="describe_logo_email">email logo</string>
-    <string name="sakai">Sakai</string>
-    <string name="describe_logo_sakai">sakai logo</string>
-    <string name="mis_web">MIS Web</string>
-    <string name="describe_logo_mis_web">mis web logo</string>
-    <string name="ug_web">UG website</string>
-    <string name="describe_logo_ug_web">ug Website logo</string>
-    <string name="ug_library">UG Library</string>
-    <string name="describe_logo_ug_library">ug library logo</string>
-    <string name="School_name">UNIVERSITY OF GHANA</string>
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="program">Program</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="level">Level</string>
+    <string name="log_in_btn">Log in</string>
+    <string name="get_started_btn">Get Started</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="i_bot">I-BOT</string>
+    <string name="help">Need Help? Consult</string>
+    <string-array name="level">
+        <item>100</item>
+        <item>200</item>
+        <item>300</item>
+        <item>400</item>
+    </string-array>
 </resources>
