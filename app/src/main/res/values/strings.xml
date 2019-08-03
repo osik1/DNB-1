@@ -19,4 +19,6 @@
     <string name="ug_library">UG Library</string>
     <string name="describe_logo_ug_library">ug library logo</string>
     <string name="School_name">UNIVERSITY OF GHANA</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_dnb_ilibrary">DnbILibrary</string>
 </resources>

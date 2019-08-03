@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.dbn.I_library"
+
+    >
+
+
+
+
+    <item
+        android:id="@+id/botActions"
+        android:title="i Bot"
+        
+        ></item>
+
+
+    <item
+        android:id="@+id/updateActions"
+        android:title="Update Board"></item>
+
+
+    <item
+        android:id="@+id/suggestionActions"
+        android:title="Suggestion Box"></item>
+
+    <item
+        android:id="@+id/contactActions"
+        android:title="Contact"></item>
+
+    <item
+        android:id="@+id/AboutActions"
+        android:title="About Us"></item>
+
+
+
+</menu>
