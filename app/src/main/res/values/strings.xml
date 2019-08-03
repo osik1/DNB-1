@@ -1,4 +1,71 @@
 <resources>
-    <string name="app_name">Dbn</string>
+
+    <!--Featured Links Reference Texts-->
+    <string name="app_name">DNB</string>
+    <string name="featured_links">Featured Links</string>
+    <string name="describe_logo_featured_links_logo">featured links logo</string>
+
+    <string name="describe_logo_i_library">i-library logo</string>
+
+    <string name="describe_logo_email">email logo</string>
+    <string name="sakai">Sakai</string>
+    <string name="describe_logo_sakai">sakai logo</string>
+    <string name="mis_web">MIS Web</string>
+    <string name="describe_logo_mis_web">mis web logo</string>
+    <string name="ug_web">UG website</string>
+    <string name="describe_logo_ug_web">ug Website logo</string>
+    <string name="ug_library">UG Library</string>
+    <string name="describe_logo_ug_library">ug library logo</string>
+    <string name="School_name">UNIVERSITY OF GHANA</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_username">UserName</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="menu_home">Home</string>
+    <string name="menu_timetable">Time Table</string>
+    <string name="menu_announcement">General announcement</string>
+    <string name="menu_library">I-Library</string>
+    <string name="menu_newsfeed">News Feed</string>
+    <string name="menu_featuredLinks">Featured Links</string>
+    <string name="menu_profile">Profile Settings</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_message">Contact Us</string>
+
+    <string name="title_activity_general_announcement">GeneralAnnouncement</string>
+    <string name="title_activity_time_table">TimeTable</string>
+    <string name="title_activity_i__library">I_Library</string>
+    <string name="title_activity_featured_link">FeaturedLink</string>
+    <string name="title_activity_news_feed">NewsFeed</string>
+    <string name="communicate">Communicate</string>
+    <string name="timetable">Timetable image</string>
+    <string name="announcement">Announcement</string>
+    <string name="i_library">I-Library image</string>
+    <string name="featuredlink">Featured Link image</string>
+    <string name="newsfeed">News Feed image</string>
+    <string name="notification_error_ssl_cert_invalid">SSL error!, gives permission</string>
+    <string name="title_activity_profile_settings">ProfileSettings</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="title_activity_message_us">Contact Us</string>
+    <string name="phone_number">Phone number</string>
+    <string name="program">Program</string>
+    <string name="email">Email</string>
+    <string name="level">Choose your level</string>
+    <string name="level_100">100</string>
+    <string name="level_200">200</string>
+    <string name="level_300">300</string>
+    <string name="level_400">400</string>
+    <string name="update_profile">Update profile</string>
+    <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
+
 </resources>

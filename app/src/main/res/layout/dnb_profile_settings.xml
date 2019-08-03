@@ -12,9 +12,11 @@
         layout="@layout/dnb_app_bar_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-    <include
-        layout="@layout/dnb_content_featured_link"/>
 
+    <include
+        layout="@layout/dnb_content_profile_settings"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
