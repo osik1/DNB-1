@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">DNB</string>
     <string name="action_settings">Settings</string>
+
     <string name="sign_up">Sign up</string>
     <string name="log_in">Log in</string>
     <string name="username">Username</string>
@@ -20,4 +21,36 @@
         <item>300</item>
         <item>400</item>
     </string-array>
+
+
+
+    <!--Featured Links Reference Texts-->
+    <string name="featured_links">Featured Links</string>
+    <string name="describe_logo_featured_links_logo">featured links logo</string>
+    <string name="i_library">I-Library</string>
+    <string name="describe_logo_i_library">i-library logo</string>
+    <string name="email">E-Mail</string>
+    <string name="describe_logo_email">email logo</string>
+    <string name="sakai">Sakai</string>
+    <string name="describe_logo_sakai">sakai logo</string>
+    <string name="mis_web">MIS Web</string>
+    <string name="describe_logo_mis_web">mis web logo</string>
+    <string name="ug_web">UG website</string>
+    <string name="describe_logo_ug_web">ug Website logo</string>
+    <string name="ug_library">UG Library</string>
+    <string name="describe_logo_ug_library">ug library logo</string>
+    <string name="School_name">UNIVERSITY OF GHANA</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Level_hundred">Level 100</string>
+    <string name="Level_two_hundred">Level 200</string>
+    <string name="Level_three_hundred">Level 300</string>
+    <string name="Level_four_hundred">Level 400</string>
+    <string name="depart_update">Class Update</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_dnb_ilibrary">DnbILibrary</string>
+
 </resources>

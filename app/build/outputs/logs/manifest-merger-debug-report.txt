@@ -1,0 +1,182 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+MERGED from [com.android.support:design:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/093fcca086d3cec2583f4561d930f5d5/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/77b4d5bc9bc2d3fc838306adcf260dd4/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zanu/.gradle/caches/transforms-2/files-2.1/3459f44f0f93a03d4c1f6267a6dda846/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-v4:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/c557902558daee44fbee34120db0ac68/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/e57a16ee546dce76cb3f81cf3a553fd9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/1907449004884351437f7fd0858d0d43/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/dca9cdbd055dd6eec6ca1259ed316a0b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/b40d96178ac8c08ff9f4430cd27e669b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/28339d0840116a67a87cd43f73cf0c93/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/6188b068b8377d0a9c8ceca3ea66b6f0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/3ff0c071de01996fb1b24e23fe566100/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/b6c3d0c239752f53823984ed849d3aca/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/1bd1523e4ad95265a15767670c33512c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/0a3542c00d4c1e538b08bbfdd101a445/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/18f3ee90d321c149cf62745d8d2231c1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/4ffe0732a93dea2e40ea54c277783b83/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/a0d89a76388aceb6fad19c6bfdfc5b1a/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/954a94dd76e85770cd32eb5efa2ce800/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/431d921a48abe5dc4f8f9661fe26e094/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/5406dc49a755edd15c42b075448dd47b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/9f5c146aadbf38468b40160bc8196802/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8b578675cf3226b44c2fe23ad0275445/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/567baa07c9e1270b5e10f7a96b572711/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/42f4df50fda69f05d9c4cc15dd6e00a7/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/ec6ee53fdfd03950baecef033103cd59/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/cf366ff3da86f31e127f08f842486a8c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8125543b3d40b6d07a7841a3ee4a5147/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/befa2fc4e08205c1dbad25bc6f16dba0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/1d8ebcb5fb17285cafba29100224efa9/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/d5ca28b20812dda3f7d0958e127c7499/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/0072ee37d61fa3bb10a1a1b0611bb48a/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/338e5028d79d3f3576d533e303e69bd0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/f10739c656d49ced546482cede6c45a6/AndroidManifest.xml:17:1-22:12
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+	package
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:3:5-30
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:1-31:12
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:5:5-29:19
+MERGED from [com.android.support:design:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/093fcca086d3cec2583f4561d930f5d5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/093fcca086d3cec2583f4561d930f5d5/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zanu/.gradle/caches/transforms-2/files-2.1/3459f44f0f93a03d4c1f6267a6dda846/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zanu/.gradle/caches/transforms-2/files-2.1/3459f44f0f93a03d4c1f6267a6dda846/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:support-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/9f5c146aadbf38468b40160bc8196802/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/9f5c146aadbf38468b40160bc8196802/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8b578675cf3226b44c2fe23ad0275445/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8b578675cf3226b44c2fe23ad0275445/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/9f5c146aadbf38468b40160bc8196802/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:9:9-44
+	android:icon
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:7:9-39
+	android:allowBackup
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:11:9-52
+activity#com.example.dbn.DnbFragmentActivity
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:12:9-18:20
+	android:name
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:12:19-54
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:13:13-17:29
+action#android.intent.action.MAIN
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:14:17-69
+	android:name
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:14:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:16:17-77
+	android:name
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:16:27-74
+activity#com.example.dbn.MainActivity
+ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:19:9-28:20
+	android:label
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:21:13-45
+	android:theme
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:22:13-56
+	android:name
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml:20:13-41
+uses-sdk
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:design:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/093fcca086d3cec2583f4561d930f5d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/093fcca086d3cec2583f4561d930f5d5/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/77b4d5bc9bc2d3fc838306adcf260dd4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/77b4d5bc9bc2d3fc838306adcf260dd4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zanu/.gradle/caches/transforms-2/files-2.1/3459f44f0f93a03d4c1f6267a6dda846/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.3] /home/zanu/.gradle/caches/transforms-2/files-2.1/3459f44f0f93a03d4c1f6267a6dda846/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/c557902558daee44fbee34120db0ac68/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/c557902558daee44fbee34120db0ac68/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/e57a16ee546dce76cb3f81cf3a553fd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/e57a16ee546dce76cb3f81cf3a553fd9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/1907449004884351437f7fd0858d0d43/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/1907449004884351437f7fd0858d0d43/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/dca9cdbd055dd6eec6ca1259ed316a0b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/dca9cdbd055dd6eec6ca1259ed316a0b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/b40d96178ac8c08ff9f4430cd27e669b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/b40d96178ac8c08ff9f4430cd27e669b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/28339d0840116a67a87cd43f73cf0c93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/28339d0840116a67a87cd43f73cf0c93/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/6188b068b8377d0a9c8ceca3ea66b6f0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/6188b068b8377d0a9c8ceca3ea66b6f0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/3ff0c071de01996fb1b24e23fe566100/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/3ff0c071de01996fb1b24e23fe566100/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/b6c3d0c239752f53823984ed849d3aca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/b6c3d0c239752f53823984ed849d3aca/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/1bd1523e4ad95265a15767670c33512c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/1bd1523e4ad95265a15767670c33512c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/0a3542c00d4c1e538b08bbfdd101a445/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/0a3542c00d4c1e538b08bbfdd101a445/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/18f3ee90d321c149cf62745d8d2231c1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/18f3ee90d321c149cf62745d8d2231c1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/4ffe0732a93dea2e40ea54c277783b83/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/4ffe0732a93dea2e40ea54c277783b83/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/a0d89a76388aceb6fad19c6bfdfc5b1a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/a0d89a76388aceb6fad19c6bfdfc5b1a/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/954a94dd76e85770cd32eb5efa2ce800/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/954a94dd76e85770cd32eb5efa2ce800/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/431d921a48abe5dc4f8f9661fe26e094/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/431d921a48abe5dc4f8f9661fe26e094/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/5406dc49a755edd15c42b075448dd47b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/5406dc49a755edd15c42b075448dd47b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/9f5c146aadbf38468b40160bc8196802/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/9f5c146aadbf38468b40160bc8196802/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8b578675cf3226b44c2fe23ad0275445/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8b578675cf3226b44c2fe23ad0275445/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/567baa07c9e1270b5e10f7a96b572711/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/567baa07c9e1270b5e10f7a96b572711/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/42f4df50fda69f05d9c4cc15dd6e00a7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/42f4df50fda69f05d9c4cc15dd6e00a7/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/ec6ee53fdfd03950baecef033103cd59/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/ec6ee53fdfd03950baecef033103cd59/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/cf366ff3da86f31e127f08f842486a8c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/cf366ff3da86f31e127f08f842486a8c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8125543b3d40b6d07a7841a3ee4a5147/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/8125543b3d40b6d07a7841a3ee4a5147/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/befa2fc4e08205c1dbad25bc6f16dba0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/befa2fc4e08205c1dbad25bc6f16dba0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/1d8ebcb5fb17285cafba29100224efa9/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/1d8ebcb5fb17285cafba29100224efa9/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/d5ca28b20812dda3f7d0958e127c7499/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /home/zanu/.gradle/caches/transforms-2/files-2.1/d5ca28b20812dda3f7d0958e127c7499/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/0072ee37d61fa3bb10a1a1b0611bb48a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/0072ee37d61fa3bb10a1a1b0611bb48a/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/338e5028d79d3f3576d533e303e69bd0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/338e5028d79d3f3576d533e303e69bd0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/f10739c656d49ced546482cede6c45a6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /home/zanu/.gradle/caches/transforms-2/files-2.1/f10739c656d49ced546482cede6c45a6/AndroidManifest.xml:20:5-44
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		ADDED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
+		INJECTED from /home/zanu/AndroidStudioProjects/DNB/app/src/main/AndroidManifest.xml
