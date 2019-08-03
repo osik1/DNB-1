@@ -23,3 +23,21 @@
         app:menu="@menu/menu_main" />
 
 </android.support.v4.widget.DrawerLayout>
+
+
+</android.support.constraint.ConstraintLayout>
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:background="@color/AntiqueWhite"
+        android:id="@+id/dnb_list_View"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+
+
+</LinearLayout>
+
+
