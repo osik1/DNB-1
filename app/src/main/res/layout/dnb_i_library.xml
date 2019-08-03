@@ -9,6 +9,15 @@ android:fitsSystemWindows="true" >
 
 
 
+    <ImageView
+        android:id="@+id/dnb_homebutton"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="330dp"
+        android:layout_marginVertical="50dp"
+        />
+
+
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
@@ -30,6 +39,23 @@ android:fitsSystemWindows="true" >
         android:id="@+id/i_librarytoolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
+        android:text="@string/School_name"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/university_of_ghana"
+        android:textStyle="bold"
+        android:layout_marginVertical="70dp"
+        android:layout_marginHorizontal="80dp"/>
+
+
+    <ImageView
+        android:id="@+id/dnb_IlibraryBackArrow"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginVertical="60dp"
+        android:layout_marginHorizontal="20dp"
+        />
+
         android:background="#99bdd4"
         android:elevation="4dp"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"

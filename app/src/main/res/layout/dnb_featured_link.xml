@@ -65,7 +65,7 @@
                         android:layout_width="80dp"
                         android:layout_height="70dp"
                         android:contentDescription="@string/describe_logo_i_library"
-                        android:src="@drawable/i_lbrary_logo" />
+                        android:src="@drawable/ilbrarylogo" />
                 </LinearLayout>
                 <LinearLayout
                     android:background="@color/card_bg"
@@ -97,7 +97,7 @@
                         android:layout_height="70dp"
                         android:scaleType="centerCrop"
                         android:contentDescription="@string/describe_logo_email"
-                        android:src="@drawable/mail_ico" />
+                        android:src="@drawable/mailico" />
                 </LinearLayout>
                 <LinearLayout
                     android:background="@color/card_bg"
@@ -138,7 +138,7 @@
                         android:layout_width="80dp"
                         android:layout_height="70dp"
                         android:contentDescription="@string/describe_logo_sakai"
-                        android:src="@drawable/student_logo" />
+                        android:src="@drawable/studentlogo" />
                 </LinearLayout>
                 <LinearLayout
                     android:background="@color/card_bg"
@@ -170,7 +170,7 @@
                         android:layout_height="70dp"
                         android:scaleType="centerCrop"
                         android:contentDescription="@string/describe_logo_mis_web"
-                        android:src="@drawable/students_logo" />
+                        android:src="@drawable/studentslogo" />
                 </LinearLayout>
                 <LinearLayout
                     android:background="@color/card_bg"
@@ -211,7 +211,7 @@
                         android:layout_width="80dp"
                         android:layout_height="70dp"
                         android:contentDescription="@string/describe_logo_ug_web"
-                        android:src="@drawable/ug_site_logo" />
+                        android:src="@drawable/ugsitelogo" />
                 </LinearLayout>
                 <LinearLayout
                     android:background="@color/card_bg"
@@ -243,7 +243,7 @@
                         android:layout_height="70dp"
                         android:scaleType="centerCrop"
                         android:contentDescription="@string/describe_logo_ug_library"
-                        android:src="@drawable/ug_library_logo" />
+                        android:src="@drawable/ug_librarylogo" />
                 </LinearLayout>
                 <LinearLayout
                     android:background="@color/card_bg"
@@ -264,7 +264,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|center_horizontal"
         android:layout_margin="@dimen/fab_margin"
-        android:src="@drawable/add_ico"
         android:scaleType="centerCrop"/>
 
 </LinearLayout>
