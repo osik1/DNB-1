@@ -20,6 +20,7 @@
     <string name="describe_logo_ug_library">ug library logo</string>
     <string name="School_name">UNIVERSITY OF GHANA</string>
 
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Level_hundred">Level 100</string>
@@ -27,4 +28,7 @@
     <string name="Level_three_hundred">Level 300</string>
     <string name="Level_four_hundred">Level 400</string>
     <string name="depart_update">Class Update</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_dnb_ilibrary">DnbILibrary</string>
 </resources>
