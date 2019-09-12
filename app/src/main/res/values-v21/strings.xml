@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="date">Date</string>
+    <string name="ann_details">Your announcement details will appear here</string>
+    <string name="ann_date">Monday, August 26, 2019.</string>
+    <string name="ann_title">Title of your announcement</string>
+    <string name="instagram">Instagram</string>
+    <string name="student_servicee">Student Service</string>
+    <string name="university_of_ghana">University of Ghana</string>
+</resources>

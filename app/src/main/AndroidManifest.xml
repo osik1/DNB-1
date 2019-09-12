@@ -1,25 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.dbn">
+    package="com.i_project.dnb">
 
-    <application
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+     <application
         android:allowBackup="true"
-        android:icon="@mipmap/dnblogo"
+        android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/dnblogo"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".DnbFragmentActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        android:theme="@style/AppTheme"
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:usesCleartextTraffic="true">
+
+         <activity
+            android:name=".Dnb_FragmentActivity"
+            android:label="Timetable"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".DnbILibrary"
-            android:label="@string/title_activity_dnb_ilibrary"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:name=".Dnb_ContactUs"
+            android:label="Contact Us"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+         <activity
+            android:name=".Dnb_Settings"
+            android:label="Profile Settings"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Dnb_FeaturedLink"
+            android:label="@string/featured_links"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+         <activity
+            android:name=".Dnb_UGWebsite"
+            android:label="@string/ug_website"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+         <activity
+             android:name=".Dnb_Download"
+             android:label="@string/download"
+             android:theme="@style/AppTheme.NoActionBar" />
+
+         <activity
+             android:name=".Dnb_Announcement"
+             android:label="@string/announcement"
+             android:theme="@style/AppTheme.NoActionBar" />
+
+         <activity
+            android:name=".Dnb_MISWeb"
+            android:label="@string/mis_web"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Dnb_Sakai"
+            android:label="@string/sakai"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+         <activity
+             android:name=".Dnb_I_Library"
+             android:label="@string/i_library"
+             android:theme="@style/AppTheme.NoActionBar" />
+
+
+         <activity
+            android:name=".Dnb_UGLibrary"
+            android:label="@string/ug_library"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Dnb_StudentService"
+            android:label="@string/student_servicee"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".Dnb_HomePage"
+            android:label="@string/university_of_ghana"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+
+        <activity android:name=".DNB_SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,7 +98,6 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

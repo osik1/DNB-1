@@ -1,19 +1,8 @@
 <resources>
-
-    <!--Featured Links Card Dimensions-->
-    <dimen name="feat_link_cardElevation">5dp</dimen>
-    <dimen name="feat_link_cardCornerRadius">15dp</dimen>
-    <dimen name="card_marginRight">16dp</dimen>
-    <dimen name="card_marginEnd">16dp</dimen>
-
-    <dimen name="university_of_ghana">22dp</dimen>
-
-
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
-
 </resources>
