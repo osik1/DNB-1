@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:checkable="true"
     tools:showIn="navigation_view">
 
     <group android:checkableBehavior="single">
+
+        <!--        <item-->
+        <!--            android:id="@+id/nav_home"-->
+        <!--            android:icon="@drawable/ic_menu_timetable"-->
+        <!--            android:title="@string/home" />-->
+
         <item
             android:id="@+id/nav_timetable"
-            android:icon="@drawable/ic_menu_timetable"
+            android:icon="@drawable/ic_timetable_table"
             android:title="@string/timetable" />
         <item
             android:id="@+id/nav_announcement"
@@ -14,25 +21,25 @@
             android:title="@string/announcement" />
         <item
             android:id="@+id/nav_library"
-            android:icon="@drawable/ic_menu_library"
+            android:icon="@drawable/ic_menu_i_library"
             android:title="@string/i_library" />
 
         <item
             android:id="@+id/nav_featured_links"
-            android:icon="@drawable/ic_menu_featuredlink"
+            android:icon="@drawable/ic_menu_featured_link"
             android:title="@string/featured_links" />
 
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_profile"
-                android:icon="@drawable/ic_menu_profile"
-                android:title="@string/settings" />
+    <item android:title="@string/communicate">
+        <menu>-->
+            <!--            <item-->
+            <!--                android:id="@+id/nav_settings"-->
+            <!--                android:icon="@drawable/ic_menu_profile"-->
+            <!--                android:title="@string/settings" />-->
             <item
                 android:id="@+id/nav_contact"
-                android:icon="@drawable/ic_menu_message"
+                android:icon="@drawable/ic_menu_contact_us"
                 android:title="@string/contact_us" />
         </menu>
     </item>

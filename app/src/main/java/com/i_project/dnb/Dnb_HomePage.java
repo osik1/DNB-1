@@ -1,10 +1,14 @@
 package com.i_project.dnb;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+
 import android.os.Bundle;
 import android.os.Handler;
+
 import com.google.android.material.navigation.NavigationView;
+
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -16,7 +20,7 @@ import android.widget.Toast;
 
 public class Dnb_HomePage extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-
+    ActionBarDrawerToggle toggle;
     @SuppressLint("setJavaScriptEnabled")
 
     @Override
@@ -29,8 +33,10 @@ public class Dnb_HomePage extends AppCompatActivity
         //Handles the Navigation drawer
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+
+         toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+         toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.nav_header));
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
@@ -88,6 +94,11 @@ public class Dnb_HomePage extends AppCompatActivity
 
             switch (id) {
 
+//                case R.id.nav_home:
+//                    Intent h = new Intent(Dnb_HomePage.this, Dnb_HomePage.class);
+//                    startActivity(h);
+//                    break;
+
                 case R.id.nav_timetable:
                     Intent t = new Intent(Dnb_HomePage.this, Dnb_FragmentActivity.class);
                     startActivity(t);
@@ -108,10 +119,10 @@ public class Dnb_HomePage extends AppCompatActivity
                     startActivity(f);
                     break;
 
-                case R.id.nav_profile:
-                    Intent p = new Intent(Dnb_HomePage.this, Dnb_Settings.class);
-                    startActivity(p);
-                    break;
+//                case R.id.nav_settings:
+//                    Intent p = new Intent(Dnb_HomePage.this, Dnb_Settings.class);
+//                    startActivity(p);
+//                    break;
 
                 case R.id.nav_contact:
                     Intent c = new Intent(Dnb_HomePage.this, Dnb_ContactUs.class);
@@ -146,4 +157,5 @@ public class Dnb_HomePage extends AppCompatActivity
             }
         }, 2000);
     }
+
 }

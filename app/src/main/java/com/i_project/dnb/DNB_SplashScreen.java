@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.util.Objects;
+
 public class DNB_SplashScreen extends AppCompatActivity {
 
     @Override
@@ -15,14 +17,13 @@ public class DNB_SplashScreen extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN );
 
         setContentView(R.layout.dnb_splashscreen);
-        getSupportActionBar().hide();
+        Objects.requireNonNull(getSupportActionBar()).hide();
         LogoLauncher logoLauncher = new LogoLauncher();
         logoLauncher.start();
         Thread t = new Thread(){
         };
-
-
     }
+
     private class LogoLauncher extends Thread{
         public void run(){
 

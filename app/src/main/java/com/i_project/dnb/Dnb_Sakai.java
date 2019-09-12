@@ -5,8 +5,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.http.SslError;
 import android.os.Bundle;
-
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.core.app.NavUtils;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -19,8 +20,7 @@ import android.webkit.SslErrorHandler;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-public class Dnb_Sakai extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Dnb_Sakai extends AppCompatActivity {
 
     WebView webView;
     SwipeRefreshLayout swipe;
@@ -30,22 +30,9 @@ public class Dnb_Sakai extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dnb_home_sakai);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        //Handles the Navigation drawer
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-
+        setContentView(R.layout.dnb_content_sakai);
 
         //Loads the website using the webView//
-
         swipe = findViewById(R.id.swipe_refresh);
         swipe.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
@@ -59,6 +46,7 @@ public class Dnb_Sakai extends AppCompatActivity
     public void LoadWeb(){
         //Handles the webView
         webView = findViewById(R.id.webview);
+        webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAppCacheEnabled(true);
         webView.loadUrl("https://sakai.ug.edu.gh/portal/");
         swipe.setRefreshing(true);
@@ -104,56 +92,15 @@ public class Dnb_Sakai extends AppCompatActivity
         }
     }
 
-//    @Override
-//    protected void onStop() {
-//        finish();
-//        super.onStop();
-//    }
-
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        {
-            // Handle navigation view item clicks here.
-            int id = item.getItemId();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
 
-            switch (id) {
-
-                case R.id.nav_timetable:
-                    Intent t = new Intent(Dnb_Sakai.this, Dnb_FragmentActivity.class);
-                    startActivity(t);
-                    break;
-
-                case R.id.nav_announcement:
-                    Intent a = new Intent(Dnb_Sakai.this, Dnb_Sakai.class);
-                    startActivity(a);
-                    break;
-
-                case R.id.nav_library:
-                    Intent l = new Intent(Dnb_Sakai.this, Dnb_I_Library.class);
-                    startActivity(l);
-                    break;
-
-                case R.id.nav_featured_links:
-                    Intent f = new Intent(Dnb_Sakai.this, Dnb_FeaturedLink.class);
-                    startActivity(f);
-                    break;
-
-                case R.id.nav_profile:
-                    Intent p = new Intent(Dnb_Sakai.this, Dnb_Settings.class);
-                    startActivity(p);
-                    break;
-
-                case R.id.nav_contact:
-                    Intent c = new Intent(Dnb_Sakai.this, Dnb_ContactUs.class);
-                    startActivity(c);
-                    break;
-
-            }
-
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 

@@ -4,353 +4,357 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_margin="8dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".Dnb_FeaturedLink">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93" />
+
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toStartOf="@+id/end_guideline"
+        app:layout_constraintStart_toStartOf="@+id/start_guideline"
+        tools:layout_editor_absoluteY="0dp">
 
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="100">
 
             <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-                <!--I-Library Card-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_i_library"
-                    android:layout_width="150dp"
+                android:layout_weight="50"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    android:orientation="vertical"
+                    android:weightSum="3">
 
-                    <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_i_library"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="90dp"
-                            android:gravity="center_horizontal|center_vertical">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="70dp"
-                                android:contentDescription="@string/i_library"
-                                app:srcCompat="@drawable/i_library_logo" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@color/colorPrimary">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:fontFamily="sans-serif-condensed"
-                                android:text="@string/i_library"
-                                android:textAlignment="center"
-                                android:textColor="@android:color/white"
-                                android:textSize="16sp" />
+                                android:layout_height="90dp"
+                                android:gravity="center_horizontal|center_vertical">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="70dp"
+                                    android:contentDescription="@string/i_library"
+                                    android:padding="6dp"
+                                    android:src="@drawable/fl_i_library_icon" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/nav_header">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/i_library"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
                         </LinearLayout>
 
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                    </androidx.cardview.widget.CardView>
 
-                <!--Email Card-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_student_service"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-                    <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_sakai"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="90dp"
-                            android:gravity="center_horizontal|center_vertical">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="70dp"
-                                android:scaleType="centerCrop"
-                                android:contentDescription="@string/student_service"
-                                app:srcCompat="@drawable/student_service" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@color/colorPrimary">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:fontFamily="sans-serif-condensed"
-                                android:text="@string/student_service"
-                                android:textAlignment="center"
-                                android:textColor="@android:color/white"
-                                android:textSize="16sp" />
+                                android:layout_height="90dp"
+                                android:gravity="center_horizontal|center_vertical">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="70dp"
+                                    android:contentDescription="@string/sakai"
+                                    android:padding="3dp"
+                                    android:src="@drawable/fl_sakai_icon" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/nav_header">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/sakai"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-            </LinearLayout>
+                    </androidx.cardview.widget.CardView>
 
-
-            <LinearLayout
-                android:id="@+id/second_container"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/linearLayout"
-                app:layout_constraintStart_toStartOf="@+id/linearLayout"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
-                <!--Sakai Card-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_sakai"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-                    <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_ug_site"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="90dp"
-                            android:gravity="center_horizontal|center_vertical">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="70dp"
-                                android:contentDescription="@string/sakai"
-                                app:srcCompat="@drawable/student_logo" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@color/colorPrimary">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:fontFamily="sans-serif-condensed"
-                                android:text="@string/sakai"
-                                android:textAlignment="center"
-                                android:textColor="@android:color/white"
-                                android:textSize="16sp" />
-                        </LinearLayout>
-                    </LinearLayout>
+                                android:layout_height="90dp"
+                                android:gravity="center_horizontal|center_vertical">
 
-                </androidx.cardview.widget.CardView>
-                <!--MIS Web Card-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/mis_web"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="70dp"
+                                    android:padding="2dp"
+                                    android:src="@drawable/fl_ug_site_icon" />
+                            </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="88dp"
-                            android:gravity="center_horizontal|center_vertical">
-
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="70dp"
-                                android:scaleType="centerCrop"
-                                android:contentDescription="@string/mis_web"
-                                app:srcCompat="@drawable/studentslogo" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@color/colorPrimary">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:fontFamily="sans-serif-condensed"
-                                android:text="@string/mis_web"
-                                android:textAlignment="center"
-                                android:textColor="@android:color/white"
-                                android:textSize="16sp" />
+                                android:layout_height="40dp"
+                                android:background="@color/nav_header">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/ug_website"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/third_container"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="@+id/second_container"
-                app:layout_constraintHorizontal_bias="0.511"
-                app:layout_constraintStart_toStartOf="@+id/second_container"
-                app:layout_constraintTop_toBottomOf="@+id/second_container">
-                <!--UG Website Card-->
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_margin="8dp"
+                android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_ug_site"
-                    android:layout_width="150dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
+                    android:orientation="vertical"
+                    android:weightSum="3">
 
-                    <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_student_service"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="90dp"
-                            android:gravity="center_horizontal|center_vertical">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="70dp"
-                                app:srcCompat="@drawable/ugsitelogo" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@color/colorPrimary">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:fontFamily="sans-serif-condensed"
-                                android:text="@string/ug_website"
-                                android:textAlignment="center"
-                                android:textColor="@android:color/white"
-                                android:textSize="16sp" />
+                                android:layout_height="90dp"
+                                android:gravity="center_horizontal|center_vertical">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="70dp"
+                                    android:contentDescription="@string/student_service"
+                                    android:src="@drawable/fl_stu_service_icon" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/nav_header">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/student_service"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-                <!--UG Library Card-->
+                    </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card_ug_library"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    app:cardCornerRadius="10dp"
-                    app:cardElevation="5dp">
-
-                    <LinearLayout
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/mis_web"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
+                        android:layout_height="0dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="90dp"
-                            android:gravity="center_horizontal|center_vertical">
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="70dp"
-                                android:scaleType="centerCrop"
-                                app:srcCompat="@drawable/uglibrarylogo" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:background="@color/colorPrimary">
-
-                            <TextView
+                            <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:fontFamily="sans-serif-condensed"
-                                android:text="@string/ug_library"
-                                android:textAlignment="center"
-                                android:textColor="@android:color/white"
-                                android:textSize="16sp" />
+                                android:layout_height="88dp"
+                                android:gravity="center_horizontal|center_vertical">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="70dp"
+                                    android:contentDescription="@string/mis_web"
+                                    android:padding="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/fl_mis_web_icon" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/nav_header">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/mis_web"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp"/>
+                            </LinearLayout>
+
                         </LinearLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_ug_library"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#FFFFFF"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/border"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="90dp"
+                                android:gravity="center_horizontal|center_vertical">
+
+                                <ImageView
+                                    android:layout_width="80dp"
+                                    android:layout_height="70dp"
+                                    android:padding="5dp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/fl_ug_library_icon" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:background="@color/nav_header">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:fontFamily="sans-serif-condensed"
+                                    android:text="@string/ug_library"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/white"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </ScrollView>
 

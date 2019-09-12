@@ -1,21 +1,20 @@
 package com.i_project.dnb.Fragments;
 
 
+import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
 
 import com.i_project.dnb.Adapters.DnbTimeTableListAdapter;
 import com.i_project.dnb.Constractors.DnbTimeTableListConstructor;
@@ -58,7 +57,6 @@ public class LevelThreeHundredFragment extends Fragment implements LoaderManager
         dnbRoot = inflater.inflate(R.layout.dnb_content_time_table_screen,container,false);
         listAdapters = new ArrayList<>();
         listView = dnbRoot.findViewById(R.id.dnb_list_View);
-        newsTextView = dnbRoot.findViewById(R.id.text_view);
         mLoadingProgressBar = dnbRoot.findViewById(R.id.pbLoading);
 
         //================================================//
@@ -73,11 +71,11 @@ public class LevelThreeHundredFragment extends Fragment implements LoaderManager
         final NetworkInfo networkInfo = manager.getActiveNetworkInfo();
         listView = dnbRoot.findViewById(R.id.dnb_list_View);
         newsTextView = dnbRoot.findViewById(R.id.text_view);
+        mLoadingProgressBar.setVisibility(View.VISIBLE);
 
         if (networkInfo != null && networkInfo.isConnected()) {
             LoaderManager loaderManager = getActivity().getLoaderManager();
             loaderManager.initLoader( API_KEY, null, this );
-            mLoadingProgressBar.setVisibility(View.VISIBLE);
         }
         else {
             newsTextView.setVisibility( View.VISIBLE );
@@ -97,12 +95,12 @@ public class LevelThreeHundredFragment extends Fragment implements LoaderManager
     @Override
     public void onLoadFinished(Loader< List< DnbTimeTableListAdapter > > loader, List< DnbTimeTableListAdapter > data) {
         listAdapters = new ArrayList<>(data);
+
         if (listAdapters.isEmpty()) {
             AlertDialog.Builder builder = new AlertDialog.Builder( getContext() );
-            builder.setMessage( "No data is available ")
-                    .setTitle( "Timetable is not yet available");
-            AlertDialog dialog = builder.create();
-            dialog.show();
+            builder.setTitle(R.string.connectionError);
+            builder.setMessage(R.string.connectionMessage);
+            builder.show();
         }
         setList( listAdapters );
 

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import com.google.android.material.navigation.NavigationView;
+
+import androidx.core.app.NavUtils;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -15,8 +17,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-public class Dnb_ContactUs extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class Dnb_ContactUs extends AppCompatActivity {
 
     @SuppressLint("setJavaScriptEnabled")
 
@@ -29,26 +30,13 @@ public class Dnb_ContactUs extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dnb_home_contact_us);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        //Handles the Navigation drawer
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-        navigationView.setNavigationItemSelectedListener(this);
-
+        setContentView(R.layout.dnb_content_contact_us);
 
         Instagram = findViewById(R.id.instagram);
         Instagram.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openInstagram = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/_u/iprojectleg/?hl=en"));
+                Intent openInstagram = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.instagram_link)));
                 startActivity(openInstagram);
             }
         });
@@ -58,13 +46,13 @@ public class Dnb_ContactUs extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 try {
-                    String toNumber = "233209915005";
-                    Intent sendWhatsapp = new Intent(Intent.ACTION_VIEW,Uri.parse("http://api.whatsapp.com/send?phone="+toNumber));
+                    String toNumber = getString(R.string.whatsapp_number);
+                    Intent sendWhatsapp = new Intent(Intent.ACTION_VIEW,Uri.parse(getString(R.string.whatsapp_link)+toNumber));
                     startActivity(sendWhatsapp);
                 }
                 catch (Exception e){
                     e.printStackTrace();
-                    Toast.makeText(Dnb_ContactUs.this,"Please install whatsapp ", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Dnb_ContactUs.this,getString(R.string.install_whatsapp), Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -72,7 +60,7 @@ public class Dnb_ContactUs extends AppCompatActivity
         Twitter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent openTwitter = new Intent(Intent.ACTION_VIEW, Uri.parse("https://twitter.com/IProjectLeg?s=08"));
+                Intent openTwitter = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.twitter_link)));
                 startActivity(openTwitter);
             }
         });
@@ -83,15 +71,17 @@ public class Dnb_ContactUs extends AppCompatActivity
 
                 try {
                     // Check if FB app is even installed
-                    Intent openFb = new Intent(Intent.ACTION_VIEW, Uri.parse("https://m.facebook.com/pg/IProjectLeg/posts/?ref=page_internal"));
+                    Intent openFb = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.facebook_link)));
                     startActivity(openFb);
                 } catch (Exception e) {
                     // Cache and Open a url in browser
-                    Intent openFb = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/pg/IProjectLeg/posts/?ref=page_internal"));
+                    Intent openFb = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.facebook_link)));
                     startActivity(openFb);
                 }
             }
         });
+        //139916
+        //pass 66769435957668
 
         Email = findViewById(R.id.email);
         Email.setOnClickListener(new View.OnClickListener() {
@@ -118,50 +108,14 @@ public class Dnb_ContactUs extends AppCompatActivity
     }
 
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        {
-            // Handle navigation view item clicks here.
-            int id = item.getItemId();
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
 
-            switch (id) {
-
-                case R.id.nav_timetable:
-                    Intent t = new Intent(Dnb_ContactUs.this, Dnb_FragmentActivity.class);
-                    startActivity(t);
-                    break;
-
-                case R.id.nav_announcement:
-                    Intent a = new Intent(Dnb_ContactUs.this, Dnb_Announcement.class);
-                    startActivity(a);
-                    break;
-
-
-                case R.id.nav_library:
-                    Intent l = new Intent(Dnb_ContactUs.this, Dnb_I_Library.class);
-                    startActivity(l);
-                    break;
-
-                case R.id.nav_featured_links:
-                    Intent f = new Intent(Dnb_ContactUs.this, Dnb_FeaturedLink.class);
-                    startActivity(f);
-                    break;
-
-                case R.id.nav_profile:
-                    Intent p = new Intent(Dnb_ContactUs.this, Dnb_Settings.class);
-                    startActivity(p);
-                    break;
-
-                case R.id.nav_contact:
-                    Intent c = new Intent(Dnb_ContactUs.this, Dnb_ContactUs.class);
-                    startActivity(c);
-                    break;
-
-            }
-
-            DrawerLayout drawer = findViewById(R.id.drawer_layout);
-            drawer.closeDrawer(GravityCompat.START);
-            return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 

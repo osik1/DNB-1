@@ -40,7 +40,7 @@ public class Dnb_TimeTableUtility {
     private static String course_venue;
     private static String course_title;
     private static String course_code;
-    private static String current_date;
+    //private static String current_date;
 
 
 
@@ -166,11 +166,11 @@ public class Dnb_TimeTableUtility {
                 course_end_time = jObject.getString("course_end_time");
                 course_start_time = jObject.getString("course_start_time");
                 lecture_name = jObject.getString("lecture_name");
-                current_date = jObject.getString("current_date");
+                //current_date = jObject.getString("current_date");
 
 
 
-                timeTableList.add(new DnbTimeTableListAdapter(course_code, course_title, course_start_time, course_end_time, lecture_name, course_venue, current_date));
+                timeTableList.add(new DnbTimeTableListAdapter(course_code, course_title, course_start_time, course_end_time, lecture_name, course_venue));
             }
 
         } catch (Exception e) {

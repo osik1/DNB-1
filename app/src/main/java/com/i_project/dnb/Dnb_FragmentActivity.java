@@ -2,6 +2,7 @@ package com.i_project.dnb;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import androidx.annotation.RequiresApi;
@@ -37,6 +38,7 @@ public class Dnb_FragmentActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.nav_header));
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
@@ -56,8 +58,6 @@ public class Dnb_FragmentActivity extends AppCompatActivity
 
         viewPager.setAdapter( gagilFragmentAdapter );
 
-
-
         //====================================================//
         // this part set the action bar for the timetable    //
         //==================================================//
@@ -75,6 +75,11 @@ public class Dnb_FragmentActivity extends AppCompatActivity
             int id = item.getItemId();
 
             switch (id) {
+//
+//                case R.id.nav_home:
+//                    Intent h = new Intent(Dnb_FragmentActivity.this, Dnb_HomePage.class);
+//                    startActivity(h);
+//                    break;
 
                 case R.id.nav_timetable:
                     Intent t = new Intent(Dnb_FragmentActivity.this, Dnb_FragmentActivity.class);
@@ -86,20 +91,20 @@ public class Dnb_FragmentActivity extends AppCompatActivity
                     startActivity(a);
                     break;
 
-//                case R.id.nav_library:
-//                    Intent l = new Intent(Dnb_FragmentActivity.this, Dnb_I_Library.class);
-//                    startActivity(l);
-//                    break;
+                case R.id.nav_library:
+                    Intent l = new Intent(Dnb_FragmentActivity.this, Dnb_I_Library.class);
+                    startActivity(l);
+                    break;
 
                 case R.id.nav_featured_links:
                     Intent f = new Intent(Dnb_FragmentActivity.this, Dnb_FeaturedLink.class);
                     startActivity(f);
                     break;
 
-                case R.id.nav_profile:
-                    Intent p = new Intent(Dnb_FragmentActivity.this, Dnb_Settings.class);
-                    startActivity(p);
-                    break;
+//                case R.id.nav_settings:
+//                    Intent p = new Intent(Dnb_FragmentActivity.this, Dnb_Settings.class);
+//                    startActivity(p);
+//                    break;
 
                 case R.id.nav_contact:
                     Intent c = new Intent(Dnb_FragmentActivity.this, Dnb_ContactUs.class);

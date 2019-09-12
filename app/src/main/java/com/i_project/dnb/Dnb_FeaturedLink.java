@@ -2,6 +2,7 @@ package com.i_project.dnb;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
@@ -29,6 +30,7 @@ public class Dnb_FeaturedLink extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.nav_header));
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
@@ -85,7 +87,6 @@ public class Dnb_FeaturedLink extends AppCompatActivity
 
     }
 
-
     public void card_ug_library(){
         //Links the timetable tab to the homepage//
         Intent intent = new Intent(this, Dnb_UGLibrary.class);
@@ -131,6 +132,11 @@ public class Dnb_FeaturedLink extends AppCompatActivity
 
             switch (id) {
 
+//                case R.id.nav_home:
+//                    Intent h = new Intent(Dnb_FeaturedLink.this, Dnb_HomePage.class);
+//                    startActivity(h);
+//                    break;
+
                 case R.id.nav_timetable:
                     Intent t = new Intent(Dnb_FeaturedLink.this, Dnb_FragmentActivity.class);
                     startActivity(t);
@@ -152,10 +158,10 @@ public class Dnb_FeaturedLink extends AppCompatActivity
                     startActivity(f);
                     break;
 
-                case R.id.nav_profile:
-                    Intent p = new Intent(Dnb_FeaturedLink.this, Dnb_Settings.class);
-                    startActivity(p);
-                    break;
+//                case R.id.nav_settings:
+//                    Intent p = new Intent(Dnb_FeaturedLink.this, Dnb_Settings.class);
+//                    startActivity(p);
+//                    break;
 
                 case R.id.nav_contact:
                     Intent c = new Intent(Dnb_FeaturedLink.this, Dnb_ContactUs.class);

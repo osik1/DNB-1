@@ -13,20 +13,22 @@ public class DnbTimeTableListAdapter {
     private String venue;
     private String start_time;
     private String end_time;
-    private String current_date;
+
+    // private String current_date;
 
     //================================================//
     // this is the constructor for the timetable     //
     //==============================================//
 
-    public DnbTimeTableListAdapter(String mCourseCode, String mCourseTitle, String mStartTime, String mEndTime, String mLectureName, String mVenue, String mCurrentTime) {
+    public DnbTimeTableListAdapter(String mCourseCode, String mCourseTitle, String mStartTime, String mEndTime, String mLectureName, String mVenue) {
         this.course_code = mCourseCode;
         this.course_title = mCourseTitle;
         this.lecture_name = mLectureName;
         this.end_time = mEndTime;
         this.start_time = mStartTime;
         this.venue = mVenue;
-        this.current_date = mCurrentTime;
+
+        // this.current_date = mCurrentTime;
 
     }
 
@@ -60,9 +62,10 @@ public class DnbTimeTableListAdapter {
         return venue;
     }
 
-    public String getCurrent_date() {
-        return current_date;
-    }
+
+//    public String getCurrent_date() {
+//        return current_date;
+//    }
 
 
 }

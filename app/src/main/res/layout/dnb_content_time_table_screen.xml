@@ -15,7 +15,6 @@
 
         </ListView>
 
-
         <ProgressBar
             android:id="@+id/pbLoading"
             style="?android:attr/progressBarStyle"
@@ -43,7 +42,7 @@
             android:padding="10dp"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:text="No internet connection!"
+            android:text="@string/no_internet_connection"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

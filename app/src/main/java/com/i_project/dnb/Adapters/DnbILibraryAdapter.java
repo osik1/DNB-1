@@ -9,17 +9,19 @@ public class DnbILibraryAdapter {
     private String book_pub_date;
     private String book_version;
     private String download;
+    private int image_download;
 
     //============================================//
     // this is the constructor for the i-library //
     //==========================================//
 
-    public DnbILibraryAdapter(String mBookTitle,String mBookAuthor,String mBookPubDate, String mBookVersion, String mDownload){
+    public DnbILibraryAdapter(String mBookTitle,String mBookAuthor,String mBookPubDate, String mBookVersion, String mDownload, int mImage_download){
         this.book_author = mBookAuthor;
         this.book_title = mBookTitle;
         this.book_pub_date = mBookPubDate;
         this.book_version= mBookVersion;
         this.download = mDownload;
+        this.image_download = mImage_download;
     }
 
 
@@ -44,5 +46,11 @@ public class DnbILibraryAdapter {
     public String getBook_title() {
         return book_title;
     }
+
+    public int getImage_download() {
+        return image_download;
+    }
+
+
 
 }

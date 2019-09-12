@@ -6,7 +6,6 @@
     android:gravity="center"
     android:orientation="vertical">
 
-
         <com.google.android.material.tabs.TabLayout
             android:layout_marginTop="40dp"
             android:id="@+id/dnb_tablayout"
@@ -16,6 +15,85 @@
 
         </com.google.android.material.tabs.TabLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#007ACC"
+            android:orientation="horizontal"
+            android:paddingEnd="4dp"
+            android:weightSum="100">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="15"
+                    android:text="@string/course"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:text="@string/courseTitle"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="10"
+                    android:text="@string/time"
+                    android:layout_gravity="center"
+                    android:textAllCaps="true"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:text="@string/lecture"
+                    android:textAllCaps="true"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="25"
+                    android:text="@string/venue"
+                    android:textAllCaps="true"
+                    android:layout_gravity="center"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"/>
+        </LinearLayout>
+
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/dnb_viewpager"
             android:layout_width="match_parent"
@@ -23,5 +101,6 @@
             android:layout_weight="1">
 
         </androidx.viewpager.widget.ViewPager>
+
 
 </LinearLayout>

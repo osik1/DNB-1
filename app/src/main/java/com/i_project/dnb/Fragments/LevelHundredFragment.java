@@ -1,45 +1,47 @@
 package com.i_project.dnb.Fragments;
 
+import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+
+import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.Fragment;
 
 import com.i_project.dnb.Adapters.DnbTimeTableListAdapter;
 import com.i_project.dnb.Constractors.DnbTimeTableListConstructor;
 import com.i_project.dnb.Loader.Dnb_TimeTableLoader;
 import com.i_project.dnb.R;
 
+
 import java.util.ArrayList;
 import java.util.List;
+
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import static android.content.Context.CONNECTIVITY_SERVICE;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LevelHundredFragment extends Fragment implements LoaderManager.LoaderCallbacks< List<DnbTimeTableListAdapter>> {
+public class LevelHundredFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<DnbTimeTableListAdapter>> {
 
     private final int API_KEY = 1;
     private final String NEWS_URL = "https://script.google.com/macros/s/AKfycbxOLElujQcy1-ZUer1KgEvK16gkTLUqYftApjNCM_IRTL3HSuDk/exec?id=1e2S9UyfZ0n1CLKQQbKLEyMroZ5wugHstMPWN2Gi3dFA&sheet=Sheet1";
     private ListView listView;
     private DnbTimeTableListConstructor tableListConstructor;
     private TextView newsTextView;
-    private ArrayList< DnbTimeTableListAdapter > listAdapters;
+    private ArrayList<DnbTimeTableListAdapter> listAdapters;
 
     private ProgressBar mLoadingProgressBar;
-
 
 
     public LevelHundredFragment() {
@@ -79,50 +81,46 @@ public class LevelHundredFragment extends Fragment implements LoaderManager.Load
 
         if (networkInfo != null && networkInfo.isConnected()) {
             LoaderManager loaderManager = getActivity().getLoaderManager();
-            loaderManager.initLoader( API_KEY, null, this );
+            loaderManager.initLoader(API_KEY, null, this);
             newsTextView.setVisibility(View.INVISIBLE);
-            mLoadingProgressBar.setVisibility(View.VISIBLE);
-        }
-
-        else {
-            newsTextView.setVisibility( View.VISIBLE );
+        } else {
+            newsTextView.setVisibility(View.VISIBLE);
             mLoadingProgressBar.setVisibility(View.INVISIBLE);
         }
         return dnbRoot;
     }
 
     @Override
-    public Loader< List< DnbTimeTableListAdapter > > onCreateLoader(int id, Bundle args) {
-        Uri uri = Uri.parse( NEWS_URL );
+    public Loader<List<DnbTimeTableListAdapter>> onCreateLoader(int id, Bundle args) {
+        Uri uri = Uri.parse(NEWS_URL);
         Uri.Builder buildUpon = uri.buildUpon();
-        return new Dnb_TimeTableLoader(getContext(),buildUpon.toString());
+        return new Dnb_TimeTableLoader(getContext(), buildUpon.toString());
     }
 
     @Override
-    public void onLoadFinished(Loader< List< DnbTimeTableListAdapter > > loader, List< DnbTimeTableListAdapter > data) {
+    public void onLoadFinished(Loader<List<DnbTimeTableListAdapter>> loader, List<DnbTimeTableListAdapter> data) {
         listAdapters = new ArrayList<>(data);
 
         if (listAdapters.isEmpty()) {
-            AlertDialog.Builder builder = new AlertDialog.Builder( getContext() );
-            builder.setMessage( "No data is available")
-                    .setTitle( "Timetable is not yet available");
-            AlertDialog dialog = builder.create();
-            dialog.show();
+            AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+            builder.setTitle(R.string.connectionError);
+            builder.setMessage(R.string.connectionMessage);
+            builder.show();
         }
-        setList( listAdapters );
+        setList(listAdapters);
 
         mLoadingProgressBar.setVisibility(View.INVISIBLE);
     }
 
     @Override
-    public void onLoaderReset(Loader< List< DnbTimeTableListAdapter > > loader) {
+    public void onLoaderReset(Loader<List<DnbTimeTableListAdapter>> loader) {
 
         tableListConstructor.clear();
     }
 
 
-    private void setList(ArrayList< DnbTimeTableListAdapter> listAdapters) {
-        tableListConstructor = new DnbTimeTableListConstructor( getContext().getApplicationContext(), listAdapters );
-        listView.setAdapter( tableListConstructor );
+    private void setList(ArrayList<DnbTimeTableListAdapter> listAdapters) {
+        tableListConstructor = new DnbTimeTableListConstructor(getContext().getApplicationContext(), listAdapters);
+        listView.setAdapter(tableListConstructor);
     }
 }

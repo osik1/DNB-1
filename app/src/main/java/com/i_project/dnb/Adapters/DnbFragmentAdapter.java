@@ -1,6 +1,7 @@
 package com.i_project.dnb.Adapters;
 
 import android.content.Context;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -19,6 +20,7 @@ public class DnbFragmentAdapter extends FragmentPagerAdapter {
     // this extends the context of the fragment    //
     //============================================//
     public Context contextExtend;
+
     public DnbFragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
 
@@ -31,16 +33,13 @@ public class DnbFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int fraposition) {
 
-        if (fraposition == 0){
+        if (fraposition == 0) {
             return new LevelHundredFragment();
-        }
-        else if(fraposition == 1){
+        } else if (fraposition == 1) {
             return new LevelTwoHundredFragment();
-        }
-        else if (fraposition == 2){
+        } else if (fraposition == 2) {
             return new LevelThreeHundredFragment();
-        }
-        else if (fraposition == 3){
+        } else if (fraposition == 3) {
             return new LevelFourHundredFragment();
         }
 
@@ -56,7 +55,7 @@ public class DnbFragmentAdapter extends FragmentPagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
 
-        switch (position){
+        switch (position) {
             case 0:
                 return contextExtend.getString(R.string.Level_hundred);
 

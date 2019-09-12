@@ -11,12 +11,21 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NavUtils;
+
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
+import android.webkit.MimeTypeMap;
+import android.webkit.URLUtil;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.File;
 
 
 public class Dnb_Download extends AppCompatActivity {
@@ -30,9 +39,9 @@ public class Dnb_Download extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.download_activity);
 
-        button = findViewById(R.id.download_button);
+        button = findViewById(R.id.book_download);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,20 +49,17 @@ public class Dnb_Download extends AppCompatActivity {
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
-                    if (checkSelfPermission (Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
+                    if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
                         //permission denied, request it!
-                       String[] permission = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
+                        String[] permission = {Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
                         //show pop up for runtime permission
                         requestPermissions(permission, PERMISSION_STORAGE_CODE);
-                    }
-                    else {
+                    } else {
                         //permission granted, perform download
                         Download();
                     }
-                }
-
-                else {
+                } else {
                     //system os is less than marshmallow, perform download
                     Download();
                 }
@@ -64,12 +70,12 @@ public class Dnb_Download extends AppCompatActivity {
             @Override
             public void onReceive(Context context, Intent intent) {
                 String action = intent.getAction();
-                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)){
+                if (DownloadManager.ACTION_DOWNLOAD_COMPLETE.equals(action)) {
                     DownloadManager.Query req_query = new DownloadManager.Query();
                     req_query.setFilterById(queueId);
 
                     Cursor cursor = downloadManager.query(req_query);
-                    if (cursor.moveToFirst()){
+                    if (cursor.moveToFirst()) {
                         int columnIndex = cursor.getColumnIndex(DownloadManager.COLUMN_STATUS);
                     }
                 }
@@ -79,39 +85,66 @@ public class Dnb_Download extends AppCompatActivity {
 
     }
 
-    private void Download(){
+    private void Download() {
 
         Intent intent = getIntent();
         String string = intent.getStringExtra("URL");
 
-        downloadManager = (DownloadManager)getSystemService(Context.DOWNLOAD_SERVICE);
-        Uri uri = Uri.parse(string + "/");
-        DownloadManager.Request request = new DownloadManager.Request(uri);
-        request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
-        request.setTitle("Download"); //set title in download notification
-        request.setDescription("Downloading file......"); //set description in download notification.
+        //get the filename and the extension from the download link
+        String fileName = URLUtil.guessFileName(string, null, MimeTypeMap.getFileExtensionFromUrl(string));
 
-        request.allowScanningByMediaScanner();
-        request.setDestinationInExternalPublicDir
-                (Environment.DIRECTORY_DOCUMENTS, " " + System.currentTimeMillis()); //get current timestamp as file name
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        downloadManager.enqueue(request);
+        // check to see if the file already exist on the device or not
+        File file = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath() + "/" + fileName);
+
+        if (file.exists()) {
+            //show a toast message if the file already exist
+            Toast.makeText(getApplicationContext(), fileName + "already exist", Toast.LENGTH_LONG).show();
+        }
+        // Download the file if it does not exist on the device
+        else {
+            DownloadManager.Request request = new DownloadManager.Request(Uri.parse(string));
+
+            request.setAllowedNetworkTypes(DownloadManager.Request.NETWORK_WIFI | DownloadManager.Request.NETWORK_MOBILE);
+            request.allowScanningByMediaScanner();
+            request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+            request.setTitle(getString(R.string.downloading));
+            request.setDescription(fileName);
+
+            request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOCUMENTS, fileName);
+
+            DownloadManager manager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+            manager.enqueue(request);
+        }
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handles the back button navigation on the toolbar
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                NavUtils.navigateUpFromSameTask(this);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode){
-            case PERMISSION_STORAGE_CODE:{
-                if (grantResults.length > 0 && grantResults [0] == PackageManager.PERMISSION_GRANTED){
+        switch (requestCode) {
+            case PERMISSION_STORAGE_CODE: {
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     //permission granted from popup, perform download
                     Download();
-                }
-                else {
+                } else {
                     //permission denied from popup, show error message
                     Toast.makeText(this, "Permission denied ....!", Toast.LENGTH_LONG).show();
                 }
             }
         }
     }
+
 }
 

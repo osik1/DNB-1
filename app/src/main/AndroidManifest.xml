@@ -2,27 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.i_project.dnb">
 
-    <supports-screens
-        android:largeScreens="true"
-        android:normalScreens="true"
-        android:smallScreens="true"
-        android:xlargeScreens="true"/>
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-
-     <application
+    <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-
         android:usesCleartextTraffic="true">
 
-         <activity
+        <activity
             android:name=".Dnb_FragmentActivity"
             android:label="Timetable"
             android:screenOrientation="landscape"
@@ -30,65 +19,91 @@
 
         <activity
             android:name=".Dnb_ContactUs"
-            android:label="Contact Us"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="About Us">
 
-         <activity
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_HomePage" />
+        </activity>
+
+        <activity
+            android:name=".Dnb_Download"
+            android:label="Download file">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_I_Library" />
+        </activity>
+
+
+        <activity
             android:name=".Dnb_Settings"
-            android:label="Profile Settings"
+            android:label="Settings"
             android:theme="@style/AppTheme.NoActionBar" />
 
         <activity
             android:name=".Dnb_FeaturedLink"
-            android:label="@string/featured_links"
+            android:label="Featured Link"
             android:theme="@style/AppTheme.NoActionBar" />
 
-         <activity
+        <activity
             android:name=".Dnb_UGWebsite"
-            android:label="@string/ug_website"
+            android:label="University of Ghana">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_FeaturedLink" />
+        </activity>
+
+        <activity
+            android:name=".Dnb_Announcement"
+            android:label="Announcement"
             android:theme="@style/AppTheme.NoActionBar" />
 
-         <activity
-             android:name=".Dnb_Download"
-             android:label="@string/download"
-             android:theme="@style/AppTheme.NoActionBar" />
-
-         <activity
-             android:name=".Dnb_Announcement"
-             android:label="@string/announcement"
-             android:theme="@style/AppTheme.NoActionBar" />
-
-         <activity
+        <activity
             android:name=".Dnb_MISWeb"
-            android:label="@string/mis_web"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="UG MIS Web">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_FeaturedLink" />
+        </activity>
 
         <activity
             android:name=".Dnb_Sakai"
-            android:label="@string/sakai"
+            android:label="Sakai">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_FeaturedLink" />
+        </activity>
+
+        <activity
+            android:name=".Dnb_I_Library"
+            android:label="I-Library"
             android:theme="@style/AppTheme.NoActionBar" />
 
-         <activity
-             android:name=".Dnb_I_Library"
-             android:label="@string/i_library"
-             android:theme="@style/AppTheme.NoActionBar" />
-
-
-         <activity
+        <activity
             android:name=".Dnb_UGLibrary"
-            android:label="@string/ug_library"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="UG Library">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_FeaturedLink" />
+        </activity>
 
         <activity
             android:name=".Dnb_StudentService"
-            android:label="@string/student_servicee"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Student Service">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Dnb_FeaturedLink" />
+        </activity>
 
         <activity
             android:name=".Dnb_HomePage"
-            android:label="@string/university_of_ghana"
+            android:label="DNB"
             android:theme="@style/AppTheme.NoActionBar" />
-
 
         <activity android:name=".DNB_SplashScreen">
             <intent-filter>
@@ -100,4 +115,17 @@
 
     </application>
 
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 </manifest>
+

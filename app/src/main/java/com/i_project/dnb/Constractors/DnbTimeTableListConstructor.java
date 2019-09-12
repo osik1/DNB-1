@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Filterable;
 import android.widget.TextView;
 
 
@@ -54,13 +55,13 @@ public class DnbTimeTableListConstructor extends ArrayAdapter<DnbTimeTableListAd
         TextView course_time_end = mView.findViewById(R.id.course_time_end);
         TextView course_time_start = mView.findViewById(R.id.course_time_start);
         TextView course_title = mView.findViewById(R.id.course_title);
-        TextView current_date = mView.findViewById(R.id.current_date);
+        //TextView current_date = mView.findViewById(R.id.current_date);
 
 
 
         //=========================================================//
         // this part make use of the getter method from the time- //
-        // tablelist adapter                                     //
+        // table list adapter                                    //
         //======================================================//
         course_name.setText(tableListAdapter.getCourse_code());
         course_lecture.setText(tableListAdapter.getLecture_name());
@@ -68,7 +69,7 @@ public class DnbTimeTableListConstructor extends ArrayAdapter<DnbTimeTableListAd
         course_time_end.setText(tableListAdapter.getEnd_time());
         course_time_start.setText(tableListAdapter.getStart_time());
         course_title.setText(tableListAdapter.getCourse_title());
-        current_date.setText(tableListAdapter.getCurrent_date());
+        //current_date.setText(tableListAdapter.getCurrent_date());
 
         return mView;
     }

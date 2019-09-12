@@ -34,12 +34,6 @@ public class Dnb_Settings extends AppCompatActivity
 
     }
 
-//    @Override
-//    protected void onStop() {
-//        finish();
-//        super.onStop();
-//    }
-
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
@@ -48,6 +42,11 @@ public class Dnb_Settings extends AppCompatActivity
             int id = item.getItemId();
 
             switch (id) {
+//
+//                case R.id.nav_home:
+//                    Intent h = new Intent(Dnb_Settings.this, Dnb_HomePage.class);
+//                    startActivity(h);
+//                    break;
 
                 case R.id.nav_timetable:
                     Intent t = new Intent(Dnb_Settings.this, Dnb_FragmentActivity.class);
@@ -69,16 +68,15 @@ public class Dnb_Settings extends AppCompatActivity
                     startActivity(f);
                     break;
 
-                case R.id.nav_profile:
-                    Intent p = new Intent(Dnb_Settings.this, Dnb_Settings.class);
-                    startActivity(p);
-                    break;
+//                case R.id.nav_settings:
+//                    Intent p = new Intent(Dnb_Settings.this, Dnb_Settings.class);
+//                    startActivity(p);
+//                    break;
 
                 case R.id.nav_contact:
                     Intent c = new Intent(Dnb_Settings.this, Dnb_ContactUs.class);
                     startActivity(c);
                     break;
-
             }
 
             DrawerLayout drawer = findViewById(R.id.drawer_layout);

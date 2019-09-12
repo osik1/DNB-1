@@ -1,10 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">DNB</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="notification_error_ssl_cert_invalid">SSL Error? Confirm to continue</string>
+
+    <string name="Level_hundred">Level 100</string>
+    <string name="Level_two_hundred">Level 200</string>
+    <string name="Level_three_hundred">Level 300</string>
+    <string name="Level_four_hundred">Level 400 </string>
+
+    <string name="general_announcement">General Announcement</string>
+    <string name="timetable_image">Timetable image</string>
+
+    <string name="email">Email</string>
+    <string name="phone">Phone number</string>
+
+    <string name="dnb_logo">DNB Logo</string>
+
+    <string name="timetable">Timetable</string>
+    <string name="announcement">Announcement</string>
+    <string name="featured_links">Featured Links</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="update_profile">Save</string>
+    <string name="level">Level</string>
+    <string name="learning_center">Learning Center</string>
+    <string name="program">Program</string>
+
+    <string name="time">time</string>
+    <string name="course">course code</string>
+    <string name="venue">venue</string>
+    <string name="lecture_hall">New Block</string>
+    <string name="lecture_name">Mr. Adingo</string>
+    <string name="lecture">Lecturer</string>
+    <string name="start_time">8:00am</string>
+    <string name="end_time">8:00am</string>
+    <string name="course_name">csit 208</string>
+    <string name="student_service">Student Service</string>
+    <string name="i_library">I-Library</string>
+    <string name="sakai">Sakai</string>
+    <string name="mis_web">MIS Web</string>
+    <string name="ug_library">UG Library</string>
+    <string name="courseTitle">Course Title</string>
+    <string name="navigation_header">Navigation header</string>
+    <string name="i_project_leg">I-Project Leg</string>
     <string name="date">Date</string>
-    <string name="ann_details">Your announcement details will appear here</string>
-    <string name="ann_date">Monday, August 26, 2019.</string>
-    <string name="ann_title">Title of your announcement</string>
     <string name="instagram">Instagram</string>
-    <string name="student_servicee">Student Service</string>
-    <string name="university_of_ghana">University of Ghana</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="twitter">twitter</string>z
+    <string name="facebook">facebook</string>
+    <string name="connectionError">No Internet Connection</string>
+    <string name="connectionErrorMessage">You need to have mobile data or wifi to access this service. Press ok to exit</string>
+    <string name="connectionMessage">You need to have mobile data or wifi to access this service.</string>
+    <string name="ug_website">UG Website</string>
+    <string name="download">Download</string>
+    <string name="no_internet_connection">No internet connection!</string>
+    <string name="connect_with_us">Connect with us</string>
+    <string name="about_us">This screen enable users to set up their profile the app. Phone number is used here for verification and ring notifications. Password allow the user to authenticate their account when the want to access a notice board on another device. Email is for mail notification. Courses make users select their course. Level is for your academic level. Continue Get Started Sign in USERNAME PASSWORD PHONE NUMBER EMAIL ADDRESS 100 PROGRAM</string>
+    <string name="install_whatsapp">Please install WhatsApp</string>
+    <string name="whatsapp_number">233209915005</string>
+    <string name="instagram_link">https://www.instagram.com/_u/iprojectleg/?hl=en</string>
+    <string name="whatsapp_link">http://api.whatsapp.com/send?phone=</string>
+    <string name="twitter_link">https://twitter.com/IProjectLeg?s=08</string>
+    <string name="facebook_link">https://m.facebook.com/pg/IProjectLeg/posts/?ref=page_internal</string>
+    <string name="lecture_schedules">Receive lecture updates on time</string>
+    <string name="download_button">download button</string>
+    <string name="open_book">open book</string>
+    <string name="book_title">Book Title</string>
+    <string name="version">version</string>
+    <string name="author">Author</string>
+    <string name="latest_news">Read latest news updates on various topics</string>
+    <string name="resources">Access UG sites and other resources here</string>
+    <string name="communicate">Communicate</string>
+    <string name="powered_by">Powered by</string>
+    <string name="downloading">Downloading</string>
+    <string name="download_pdf">Download pdf</string>
+    <string name="Passco">Passco</string>
+    <string name="I_Library_books">I-Library</string>
+
 </resources>

@@ -3,6 +3,7 @@ package com.i_project.dnb.Utility;
 import android.util.Log;
 
 import com.i_project.dnb.Adapters.DnbILibraryAdapter;
+import com.i_project.dnb.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -48,11 +49,10 @@ public class Dnb_ILibraryUtility {
         return nUrl;
     }
 
-
     public static List< DnbILibraryAdapter > fetchNewsItems(String nUrlRequest) throws JSONException {
 
 
-        URL url = creatNewUrl(nUrlRequest);
+        URL url = createNewUrl(nUrlRequest);
         String JsonResponds = null;
 
         try {
@@ -86,11 +86,13 @@ public class Dnb_ILibraryUtility {
             if (httpURLConnection.getResponseCode() == RESPONSE_CODE_OK) {
                 inputStream = httpURLConnection.getInputStream();
                 JsonResponds = readInputStream(inputStream);
-            } else {
+            }
+            else {
                 Log.e("LOG_TAG", "Error Responds Codes" + httpURLConnection.getResponseCode());
             }
-        } catch (IOException e) {
-            Log.e("LOG_TAG", "There are issues with news items retrive from the jason", e);
+        }
+        catch (IOException e) {
+            Log.e("LOG_TAG", "There are issues with news items retrieve from the jason", e);
         }
         if (httpURLConnection != null) {
             httpURLConnection.disconnect();
@@ -102,7 +104,7 @@ public class Dnb_ILibraryUtility {
 
     //===================================================//
     // this reads the reads data from fetched           //
-    // inputstream and return the result               //
+    // input stream and return the result              //
     //================================================//
     private static String readInputStream(InputStream inputStream) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
@@ -122,12 +124,13 @@ public class Dnb_ILibraryUtility {
     //==================================================//
     // this part creates a new URL object              //
     //================================================//
-    private static URL creatNewUrl(String nUrlRequest) {
+    private static URL createNewUrl (String nUrlRequest) {
         URL url = null;
         try {
             url = new URL(nUrlRequest);
-        } catch (MalformedURLException e) {
-            Log.e("LOG_TAG", "There is a problem parshing the URL", e);
+        }
+        catch (MalformedURLException e) {
+            Log.e("LOG_TAG", "There is a problem parsing the URL", e);
         }
         return url;
     }
@@ -139,7 +142,6 @@ public class Dnb_ILibraryUtility {
 
     private static List< DnbILibraryAdapter > parseJSON(String jsonResponds) throws JSONException {
 
-
         //==============================================//
         // this part set a new Array List              //
         //============================================//
@@ -147,9 +149,8 @@ public class Dnb_ILibraryUtility {
         List< DnbILibraryAdapter > timeTableList = new ArrayList<>();
 
         //===============================================//
-        //creating jsonobject and jsonArray             //
+        //creating json object and jsonArray             //
         //=============================================//
-
 
         try {
             JSONObject jsonObject = new JSONObject(jsonResponds);
@@ -164,12 +165,11 @@ public class Dnb_ILibraryUtility {
                 book_version = jObject.getString("book_version");
                 download = jObject.getString("download");
 
-               timeTableList.add(new DnbILibraryAdapter(book_title,book_author,book_pub_date,book_version,download));
-
+               timeTableList.add(new DnbILibraryAdapter(book_title,book_author,book_pub_date,book_version,download, R.drawable.book_download));
             }
+        }
 
-
-        } catch (Exception e) {
+        catch (Exception e) {
             e.printStackTrace();
         }
         return timeTableList;

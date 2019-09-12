@@ -40,8 +40,6 @@ public class Dnb_generalAnnouncementUtility {
     private static String message_date;
 
 
-
-
     public static String getnUrl() {
         Dnb_generalAnnouncementUtility.nUrl = nUrl;
 
@@ -104,6 +102,7 @@ public class Dnb_generalAnnouncementUtility {
     // this reads the reads data from fetched           //
     // inputstream and return the result               //
     //================================================//
+
     private static String readInputStream(InputStream inputStream) throws IOException {
         StringBuilder stringBuilder = new StringBuilder();
         if (inputStream != null) {
@@ -122,6 +121,7 @@ public class Dnb_generalAnnouncementUtility {
     //==================================================//
     // this part creates a new URL object              //
     //================================================//
+
     private static URL creatNewUrl(String nUrlRequest) {
         URL url = null;
         try {
@@ -138,8 +138,6 @@ public class Dnb_generalAnnouncementUtility {
     //======================================================//
 
     private static List< DnbGeneralAnnouncementAdapter > parseJSON(String jsonResponds) throws JSONException {
-
-
         //==============================================//
         // this part set a new Array List              //
         //============================================//
@@ -149,7 +147,6 @@ public class Dnb_generalAnnouncementUtility {
         //===============================================//
         //creating jsonobject and jsonArray             //
         //=============================================//
-
 
         try {
             JSONObject jsonObject = new JSONObject(jsonResponds);
